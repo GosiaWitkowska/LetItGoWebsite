@@ -11,7 +11,7 @@
 	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </head>
   <body>
-   
+
 	<div class="row">
 	<div class="content col-md-6 mx-auto">
 		<form class="form-signin" action="#">
@@ -19,6 +19,10 @@
 			<div class="col-md-12 mb-3">
 			  <label for="validationDefault01">First name</label>
 			  <input type="text" class="form-control" id="validationDefault01" placeholder="Name" value="Mark" required>
+			     <input type="text" class="form-control" name="captcha"
+                data-bv-callback="true"
+                data-bv-callback-message="Wrong answer"
+                data-bv-callback-callback="specialValidation" />
 			</div>
 			<label for="email">Email</label>
 			<div class="field col-md-12 mb-3">
@@ -73,6 +77,11 @@
 </form>
 	
 <script>
+ function specialValidation(value, validator) {
+    // Determine the numbers which are generated in captchaOperation
+    var items = $('#otherField').txt();
+    return value == sum;
+};
       const email = document.querySelector("#email");
       const icon1 = document.querySelector(".icon1");
       const icon2 = document.querySelector(".icon2");
