@@ -33,7 +33,7 @@ $(document).ready(function() {
                     },
                 }
             },
-            question: {
+            question: { 
                 message: 'Question is not valid',
                 validators: {
                     notEmpty: {
