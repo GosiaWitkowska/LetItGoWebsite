@@ -3,40 +3,85 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+	
     <link rel="stylesheet" href="style.css">
-	<link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link href="booking_form.css" rel="stylesheet">
+	
+	  <link href="http://cdn.jsdelivr.net/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet"/>
+	  <link rel="stylesheet" href="http://cdn.jsdelivr.net/fontawesome/4.1.0/css/font-awesome.min.css" />
 
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+	  <!-- BootstrapValidator CSS -->
+	  <link rel="stylesheet" href="http://cdn.jsdelivr.net/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css"/>
+
+	  <!-- jQuery and Bootstrap JS -->
+	  <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery/1.11.1/jquery.min.js"></script>
+	  <script type="text/javascript" src="http://cdn.jsdelivr.net/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+	  <!-- BootstrapValidator JS -->
+	  <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.bootstrapvalidator/0.5.0/js/bootstrapValidator.min.js"></script>
+	  
+	  <!-- Animated Loading Icon -->
+	  <style type="text/css">
+	  .glyphicon-refresh-animate {
+		  -animation: spin .7s infinite linear;
+		  -webkit-animation: spin2 .7s infinite linear;
+	  }
+
+	  @-webkit-keyframes spin2 {
+		  from { -webkit-transform: rotate(0deg);}
+		  to { -webkit-transform: rotate(360deg);}
+	  }
+
+	  @keyframes spin {
+		  from { transform: scale(1) rotate(0deg);}
+		  to { transform: scale(1) rotate(360deg);}
+	  }
+	  </style>
   </head>
   <body>
+    <div class="row d-inline-block">
+       <form class="form-inline">
+         <div class="form-group d-inline-block">
+           <input type="email" aria-expanded="false" class="form-control mr-2" 
+               placeholder="Enter your email">
+           <button type="button" class="btn btn-danger">submit</button>
+         </div>
+       </form>
+     </div>
+	<div class="row justify-content-md-center">
+	<div class="content">
+		<form class="form-booking form-horizontal" role="form" id="test-form">
 
-	<div class="row">
-	<div class="content col-md-6 mx-auto">
-		<form class="form-signin" action="#">
-		  
-			<div class="col-md-12 mb-3">
-			  <label for="validationDefault01">First name</label>
-			  <input type="text" class="form-control" id="validationDefault01" placeholder="Name" value="Mark" required>
-			     <input type="text" class="form-control" name="captcha"
-                data-bv-callback="true"
-                data-bv-callback-message="Wrong answer"
-                data-bv-callback-callback="specialValidation" />
-			</div>
-			<label for="email">Email</label>
-			<div class="field col-md-12 mb-3">
-			  <input onkeyup="check()" id="email" type="text" autocomplete="off" placeholder="Email Address" required>
-			  <div class="icons">
-				<span class="icon1 fas fa-exclamation"></span>
-				<span class="icon2 fas fa-check"></span>
+		
+			<div class="form-group">
+			  <div class="col-md-10 col-md-offset-2 centered inputGroupContainer">
+				  <label class="control-label">First Name</label>
+				  <input type="text" class="form-control" name="firstName" placeholder="First Name"/>
 			  </div>
 			</div>
-			<div class="error-text">Please Enter Valid Email Address</div>
-			
+
+			<div class="form-group">
+			  <div class="col-md-10 mb-3 inputGroupContainer">
+				<label class="control-label">Last Name</label>
+			    <input type="text" class="form-control" name="lastName" placeholder="Last Name"/>
+			  </div>
+			</div>
+
+			<div class="form-group">
+			  <div class="col-md-10 mb-3 inputGroupContainer">
+				<label class="control-label">Email</label>
+				<input type="text" class="form-control" name="email" placeholder="name@domain.com"/>
+			  </div>
+			</div>
+						
 			<div class="g-recaptcha" data-sitekey="6LeDMiwaAAAAADDLxfwr-vj2L1BbkhCaPRStckGW"></div>
-					
-			<button class="btn btn-primary" type="submit">Send Request and Pay</button>
+			
+			<div class="form-group">
+			  <div class="col-md-8 mb-3">
+				<button type="submit" class="btn btn-default" id="postForm">Send Request and Pay</button>
+			  </div>
+			</div>		
+			
 		</form>  
 	</div>
 	</div>
@@ -75,44 +120,11 @@
   </div>
 -->
 </form>
-	
-<script>
- function specialValidation(value, validator) {
-    // Determine the numbers which are generated in captchaOperation
-    var items = $('#otherField').txt();
-    return value == sum;
-};
-      const email = document.querySelector("#email");
-      const icon1 = document.querySelector(".icon1");
-      const icon2 = document.querySelector(".icon2");
-      const error = document.querySelector(".error-text");
-      const btn = document.querySelector("button");
-      let regExp = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-      function check(){
-        if(email.value.match(regExp)){
-          email.style.borderColor = "#27ae60";
-          email.style.background = "#eafaf1";
-          icon1.style.display = "none";
-          icon2.style.display = "block";
-          error.style.display = "none";
-          btn.style.display = "block";
-        }else{
-          email.style.borderColor = "#e74c3c";
-          email.style.background = "#fceae9";
-          icon1.style.display = "block";
-          icon2.style.display = "none";
-          error.style.display = "block";
-          btn.style.display = "none";
-        }
-        if(email.value == ""){
-          email.style.borderColor = "lightgrey";
-          email.style.background = "#fff";
-          icon1.style.display = "none";
-          icon2.style.display = "none";
-          error.style.display = "none";
-          btn.style.display = "none";
-        }
-      }
-    </script>
 </body>
+
+<footer>
+	<script src="validation-functions.js"></script>
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</footer>
+
 </html>
