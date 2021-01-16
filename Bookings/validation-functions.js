@@ -8,7 +8,7 @@ $(document).ready(function() {
             validating: 'glyphicon glyphicon-refresh'
         },        
         fields: {
-            firstName: {
+            name: {
              message: 'The first name is not valid',
                 validators: {
                     notEmpty: {
@@ -25,20 +25,24 @@ $(document).ready(function() {
                     },
                 }
             },
-            lastName: {
-                message: 'Last Name is not valid',
+			readingType: {
+                message: 'Reading Type is not valid',
                 validators: {
                     notEmpty: {
-                        message: 'Last Name is required and cannot be empty'
+                        message: 'Reading Type is required and cannot be empty'
+                    },
+                }
+            },
+            question: {
+                message: 'Question is not valid',
+                validators: {
+                    notEmpty: {
+                        message: 'Question is required and cannot be empty'
                     },
                     stringLength: {
                         min: 1,
-                        max: 30,
-                        message: 'Last Name must be more than 1 and less than 30 characters long'
-                    },
-                    regexp: {
-                        regexp: /^[A-z]+$/,
-                        message: 'Last Names can only consist of alphabetical characters'
+                        max: 130,
+                        message: 'Question must be more than 1 and less than 130 characters long'
                     },
                 }
             },
@@ -50,6 +54,13 @@ $(document).ready(function() {
                     emailAddress: {
                         message: 'The email address is not a valid'
                     }
+                }
+            },
+			recaptcha: {
+                validators: {
+                    notEmpty: {
+                        message: 'The email address is required and cannot be empty'
+                    },
                 }
             },
         }
