@@ -39,45 +39,37 @@
 	  </style>
   </head>
   <body>
-    <div class="row d-inline-block">
-       <form class="form-inline">
-         <div class="form-group d-inline-block">
-           <input type="email" aria-expanded="false" class="form-control mr-2" 
-               placeholder="Enter your email">
-           <button type="button" class="btn btn-danger">submit</button>
-         </div>
-       </form>
-     </div>
+
 	<div class="row justify-content-md-center">
 	<div class="content">
 		<form class="form-booking form-horizontal" role="form" id="test-form">
-
-		
-			<div class="form-group">
-			  <div class="col-md-10 col-md-offset-2 centered inputGroupContainer">
+			<div class="form-group col-md-auto">
+			  <div class="col-md-10 col-md-offset-1 inputGroupContainer">
 				  <label class="control-label">First Name</label>
 				  <input type="text" class="form-control" name="firstName" placeholder="First Name"/>
 			  </div>
 			</div>
 
 			<div class="form-group">
-			  <div class="col-md-10 mb-3 inputGroupContainer">
+			  <div class="col-md-10 col-md-offset-1 inputGroupContainer">
 				<label class="control-label">Last Name</label>
 			    <input type="text" class="form-control" name="lastName" placeholder="Last Name"/>
 			  </div>
 			</div>
 
 			<div class="form-group">
-			  <div class="col-md-10 mb-3 inputGroupContainer">
+			  <div class="col-md-10 col-md-offset-1 inputGroupContainer">
 				<label class="control-label">Email</label>
 				<input type="text" class="form-control" name="email" placeholder="name@domain.com"/>
 			  </div>
 			</div>
-						
-			<div class="g-recaptcha" data-sitekey="6LeDMiwaAAAAADDLxfwr-vj2L1BbkhCaPRStckGW"></div>
+			
+			<div class="form-group">			
+				<div class="col-md-6 col-md-offset-4 g-recaptcha" data-sitekey="6LeDMiwaAAAAADDLxfwr-vj2L1BbkhCaPRStckGW"></div>
+			</div>
 			
 			<div class="form-group">
-			  <div class="col-md-8 mb-3">
+			  <div class="col-md-8 col-md-offset-2 inputGroupContainer">
 				<button type="submit" class="btn btn-default" id="postForm">Send Request and Pay</button>
 			  </div>
 			</div>		
