@@ -25,7 +25,7 @@ $(function () {
 			var url = 'https://script.google.com/macros/s/AKfycbxIGFA-DE92Zw6JgyTJzuyJhtnzWeBhphgjXUCRo_HEp73UZEZjfd8h6A/exec';
 			var redirectUrl = 'success-page.html';
 			// show the loading 
-			$('#postForm').prepend($('<span></span>').addClass('glyphicon glyphicon-refresh glyphicon-refresh-animate'));
+			$('#btn-booking').prepend($('<span></span>').addClass('glyphicon glyphicon-refresh glyphicon-refresh-animate'));
 			var jqxhr = $.post(url, $form.serialize(), function(data) {
 				console.log("Success! Data: " + data.statusText);
 				$(location).attr('href',redirectUrl);
