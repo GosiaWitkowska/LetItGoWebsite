@@ -13,6 +13,7 @@
 	  <!-- BootstrapValidator CSS -->
 	  <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css"/>
 
+
 	  <!-- jQuery and Bootstrap JS -->
 	  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/1.11.1/jquery.min.js"></script>
 	  <script type="text/javascript" src="https://cdn.jsdelivr.net/bootstrap/3.2.0/js/bootstrap.min.js"></script>
@@ -87,7 +88,20 @@
 			<div class="form-group">			
 				<div class="col-md-7 col-md-offset-3 g-recaptcha" name="recaptcha" data-sitekey="6LeDMiwaAAAAADDLxfwr-vj2L1BbkhCaPRStckGW"></div>
 			</div>
+			<div class="cf mb2">
+            <div class="fl w-100">
+                <div class="fl w-25 pa2">Captcha</div>
+                <div class="fl w-50">
+                    <!-- The captcha container -->
+                    <div id="captchaContainer"></div>
+                </div>
+            </div>
 			
+			
+        </div>
+		
+		
+		
 			<div class="form-group">
 			  <div class="col-md-8 col-md-offset-2 inputGroupContainer">
 				<button type="submit" class="btn btn-default" id="postForm">Send Request and Pay</button>
@@ -136,7 +150,8 @@
 
 <footer>
 	<script src="validation-functions.js"></script>
-	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script
+
 </footer>
 
 </html>

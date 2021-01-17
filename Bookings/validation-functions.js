@@ -56,12 +56,22 @@ $(document).ready(function() {
                     }
                 }
             },
-			recaptcha: {
-                validators: {
-                    notEmpty: {
-                        message: 'The email address is required and cannot be empty'
-                    },
-                }
+			plugins: {
+                trigger: new FormValidation.plugins.Trigger(),
+                tachyons: new FormValidation.plugins.Tachyons(),
+                submitButton: new FormValidation.plugins.SubmitButton(),
+                icon: new FormValidation.plugins.Icon({
+                    valid: 'fa fa-check',
+                    invalid: 'fa fa-times',
+                    validating: 'fa fa-refresh',
+                }),
+                recaptcha: new FormValidation.plugins.Recaptcha({
+                    element: 'captchaContainer',
+                    message: 'The captcha is not valid',
+                    // Replace with the site key provided by Google
+                    siteKey: '...',
+                    theme: 'light',
+                }),
             },
         }
     })
