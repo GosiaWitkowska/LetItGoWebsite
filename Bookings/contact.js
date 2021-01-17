@@ -36,8 +36,7 @@ $(function () {
 				console.log("Success! Data: " + data.statusText);		
 			})
 			.done(function (){
-				var id = $('.g-recaptcha', form).attr('id');
-				grecaptcha.reset(id);
+				grecaptcha.reset(0);
 				$(location).attr('href',redirectUrl);
 			})
 			.fail(function(data) {
