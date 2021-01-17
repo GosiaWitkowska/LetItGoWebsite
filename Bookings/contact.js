@@ -23,7 +23,7 @@ $(function () {
 
 			// Use Ajax to submit form data
 			var url = 'https://script.google.com/macros/s/AKfycbxIGFA-DE92Zw6JgyTJzuyJhtnzWeBhphgjXUCRo_HEp73UZEZjfd8h6A/exec';
-			var redirectUrl = 'https://www.paypal.com/paypalme/letitgotarot';
+			var redirectUrl = 'https://paypal.me/letitgotarot?locale.x=en_GB';
 			// show the loading 
 			$('#btn-booking').prepend($('<span></span>').addClass('glyphicon glyphicon-refresh glyphicon-refresh-animate'));
 			
