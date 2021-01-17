@@ -6,7 +6,8 @@
 }
 
 .content{
-  padding: 20px; 
+ 
+ 
   background: rgb(228 225 214 / 50%);
   margin: 0 auto;
   width:60%
@@ -55,8 +56,6 @@ form .field input, select{
   letter-spacing: 1px;
   cursor: pointer;
   transition: 0.3s;
-  background: #27ae60;
-  color: #f2f2f2;
 }
 
 #btn-booking:hover{

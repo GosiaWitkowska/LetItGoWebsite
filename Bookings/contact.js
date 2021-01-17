@@ -35,7 +35,7 @@ $(function () {
 			var jqxhr = $.post(url, $form.serialize(), function(data) {
 				console.log("Success! Data: " + data.statusText);		
 			})
-			.success(function (){
+			.done(function (){
 				grecaptcha.reset();
 				$(location).attr('href',redirectUrl);
 			})
