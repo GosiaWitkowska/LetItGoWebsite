@@ -6,19 +6,18 @@
     <link rel="stylesheet" href="style.css">
 	<link href="booking_form.css" rel="stylesheet">
 	<link href='custom.css' rel='stylesheet' type='text/css'>
-	
-	
-	<link href='https://fonts.googleapis.com/css?family=Lato:300,400,500' rel='stylesheet' type='text/css'>
-	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/fontawesome/4.1.0/css/font-awesome.min.css" />
 
-	  <!-- BootstrapValidator CSS -->
-	  <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css"/>
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,500' rel='stylesheet' type='text/css'>	
+	<link rel="stylesheet" href="http://cdn.jsdelivr.net/fontawesome/4.1.0/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
 
 	  <!-- jQuery and Bootstrap JS -->
 	  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/1.11.1/jquery.min.js"></script>
-	  <script type="text/javascript" src="https://cdn.jsdelivr.net/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	  
 
 	  <!-- BootstrapValidator JS -->
 	  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.bootstrapvalidator/0.5.0/js/bootstrapValidator.min.js"></script>
@@ -38,6 +37,7 @@
 		  from { transform: scale(1) rotate(0deg);}
 		  to { transform: scale(1) rotate(360deg);}
 	  }
+	  $('#postForm').prepend($('<span></span>').addClass('glyphicon glyphicon-refresh glyphicon-refresh-animate'));
 	  </style>
   </head>
   <body>
@@ -96,7 +96,6 @@
                             <div class="help-block with-errors"></div>
                         </div>
 
-
                         <div class="form-group">
                             <div class="g-recaptcha" data-sitekey="6LeDMiwaAAAAADDLxfwr-vj2L1BbkhCaPRStckGW" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback"></div>
                             <input class="form-control d-none" data-recaptcha="true" required data-error="Please complete the Captcha">
@@ -104,7 +103,9 @@
                         </div>
 
 
-                        <input type="submit" class="btn btn-success btn-send" id="btn-booking" value="Send Request and Pay">
+						<div style="margin:3em;">
+							<button type="submit" class="btn btn-success btn-send" id="btn-booking" class="btn btn-primary mb-2">Send Request and Pay</button>
+						</div>
 
                         <p class="text-muted">
                             <strong>*</strong> These fields are required.

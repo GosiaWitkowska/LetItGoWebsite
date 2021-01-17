@@ -26,10 +26,18 @@ $(function () {
 			var redirectUrl = 'https://www.paypal.com/paypalme/letitgotarot';
 			// show the loading 
 			$('#btn-booking').prepend($('<span></span>').addClass('glyphicon glyphicon-refresh glyphicon-refresh-animate'));
+			
+			$("#btn-booking").prop("disabled", true);
+			$("#btn-booking").html(
+			`<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Sending Request...`
+			);
+    		
 			var jqxhr = $.post(url, $form.serialize(), function(data) {
-				console.log("Success! Data: " + data.statusText);
-				$(location).attr('href',redirectUrl);
+				console.log("Success! Data: " + data.statusText);		
+			})
+			.success(function (){
 				grecaptcha.reset();
+				$(location).attr('href',redirectUrl);
 			})
 			.fail(function(data) {
 				console.warn("Error! Data: " + data.statusText);
