@@ -2,10 +2,11 @@ html,
 body {
   height: 100%;
 }
-body {
+#bookings {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000000 100%), url("../assets/img/cardsDesk.jpg");
   background-repeat: no-repeat;
   background-size: cover; 
+  background-color: black; 
   
   align-items: center;
   padding-top: 40px;

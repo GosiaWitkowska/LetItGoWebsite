@@ -5,25 +5,18 @@
 	
     <link rel="stylesheet" href="style.css">
 	<link href="booking_form.css" rel="stylesheet">
-	<link href='custom.css' rel='stylesheet' type='text/css'>
+	<link href="custom.css" rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
 
-    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,500' rel='stylesheet' type='text/css'>	
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/fontawesome/4.1.0/css/font-awesome.min.css" />
-<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
-
-	  <!-- jQuery and Bootstrap JS -->
-	  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/1.11.1/jquery.min.js"></script>
-	  
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
 
 	  <!-- BootstrapValidator JS -->
 	  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.bootstrapvalidator/0.5.0/js/bootstrapValidator.min.js"></script>
 	 	  
   </head>
-  <body>
+  <body id="bookings">
 
 	<div class="row">
 		<div class="content">
@@ -86,7 +79,7 @@
                         </div>
 
 
-						<div style="margin:3em;">
+						<div class="form-group">
 							<button type="submit" class="btn btn-success btn-send" id="btn-booking" class="btn btn-primary mb-2">Send Request and Pay</button>
 							
 						</div>
@@ -100,12 +93,9 @@
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src='https://www.google.com/recaptcha/api.js'></script>
+
 <script src="validator.js"></script>
 <script src="contact.js"></script>
-
-$( document ).ready(function() {
-    grecaptcha.reset(0);
-});
 
 </body>
 
