@@ -60,18 +60,6 @@ form .field input, select{
   background: #219150;
 }
 
-.masthead {
-  position: relative;
-  width: 100%;
-  height: auto;
-  min-height: 35rem;
-  padding: 15rem 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 75%, #000000 100%), url("../assets/img/master.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-size: cover;
-}
 h1 {
   font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 2.5rem;
@@ -82,7 +70,18 @@ h1 {
   -webkit-background-clip: text;
           background-clip: text;
 }
-h2 {
-  max-width: 20rem;
-  font-size: 0.2rem;
+
+@media (max-width: 768px) 
+{
+    #logo  {
+       display:none;
+    }
+	#title {
+	  font-size: 1.2rem;
+	  margin-left: 15px;
+	}
+	.content {
+		width: 100%;
+		margin-left: 15px;
+	}
 }
