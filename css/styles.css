@@ -10417,11 +10417,7 @@ body {
        display:none;
     }
 	#title {
-	  font-size: 1.2rem;
-	  margin-left: 15px;
+	  padding-top: 125px;
 	}
-	.content {
-		width: 100%;
-		margin-left: 15px;
-	}
+
 }
