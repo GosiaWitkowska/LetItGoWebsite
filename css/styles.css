@@ -10240,6 +10240,7 @@ body {
   text-decoration: none;
   color: white;
  border-radius: 5%;
+  width: 140px;
 }
 #sub_button:hover {
   background-color: #548b87;
@@ -10413,11 +10414,14 @@ body {
 }
 @media (max-width: 768px) 
 {
-    #logo  {
+    #logo, #additional_introduaction  {
        display:none;
     }
 	#title {
-	  padding-top: 125px;
+	  padding-top: 100px;
 	}
-
+    .sub_button {
+       padding-top:40px;
+    }
+	
 }
