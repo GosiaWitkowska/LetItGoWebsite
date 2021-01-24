@@ -10228,6 +10228,9 @@ body {
 #logo {
   border-radius: 50%;
 }
+.sub_button {
+  padding-top: 40px;
+}
 #sub_button {
   box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
   padding: 1.25rem 2rem;
@@ -10241,6 +10244,7 @@ body {
   color: white;
  border-radius: 5%;
   width: 140px;
+  
 }
 #sub_button:hover {
   background-color: #548b87;
@@ -10408,7 +10412,9 @@ body {
 .contact-section .social a:active {
   color: #fff;
 }
-
+#additional_introduaction {
+ color: white;
+}
 .footer {
   padding: 5rem 0;
 }
@@ -10420,8 +10426,5 @@ body {
 	#title {
 	  padding-top: 100px;
 	}
-    .sub_button {
-       padding-top:40px;
-    }
-	
+
 }
