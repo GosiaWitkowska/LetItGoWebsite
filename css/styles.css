@@ -10420,7 +10420,7 @@ body {
 .footer {
   padding: 5rem 0;
 }
-
+h2 {margin-bottom: 2.5rem;}
 @media (max-width: 768px) 
 {
     #logo, #additional_introduaction  {
@@ -10429,5 +10429,7 @@ body {
 	#title {
 	  padding-top: 100px;
 	}
-
+	#welcome_text {
+		margin-bottom: 1rem;
+	}
 }
