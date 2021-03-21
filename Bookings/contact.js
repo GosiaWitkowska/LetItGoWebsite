@@ -8,38 +8,51 @@ $(function () {
         $('input[data-recaptcha]').val("").trigger('change');
     }
 
-    $('#contact-form').validator();
+	
+	function isFormAvailable(){
+		var email = document.getElementById("form_email").value;
+		return (email != null && email != "");
+	}
 
-    $('#contact-form').on('submit', function (e) {
-		
-        if (!e.isDefaultPrevented()) {
-			e.preventDefault();
+    function initPayPalButton() {
+      paypal.Buttons({
+        style: {
+          shape: 'rect',
+          color: 'gold',
+          layout: 'horizontal',
+          label: 'paypal',
+          
+        },
 
-			// Get the form instance
-			var $form = $(e.target);
+        createOrder: function(data, actions) {
+		  var readingType = document.getElementById("readingType").value;
+		  var price = 60;
+		  if (readingType === "1") price = 30;
+			  
+			  
+          return actions.order.create({
+		     purchase_units: [{"amount":{"currency_code":"GBP","value": price }}]
+          });
+        },
 
-			// Get the BootstrapValidator instance
-			var bv = $form.data('bootstrapValidator');
+        onApprove: function(data, actions) {
+		  		  
+          return actions.order.capture().then(function(details, data) {
+			
+			document.getElementById("email").value = details.payer.email_address;
+			
+			var $form = $('#booking-form');
+			
 
 			// Use Ajax to submit form data
-			var url = 'https://script.google.com/macros/s/AKfycbxIGFA-DE92Zw6JgyTJzuyJhtnzWeBhphgjXUCRo_HEp73UZEZjfd8h6A/exec';
-			var redirectUrl = 'https://paypal.me/letitgotarot?locale.x=en_GB';
-			// show the loading 
-			$('#btn-booking').prepend($('<span></span>').addClass('glyphicon glyphicon-refresh glyphicon-refresh-animate'));
-			
-			$("#btn-booking").prop("disabled", true);
-			$("#btn-booking").html(
-			`<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Sending Request...`
-			);
-    		
+			var url = 'https://script.google.com/macros/s/AKfycbxIGFA-DE92Zw6JgyTJzuyJhtnzWeBhphgjXUCRo_HEp73UZEZjfd8h6A/exec';			
+
 			var jqxhr = $.post(url, $form.serialize(), function(data) {
 				console.log("Success! Data: " + data.statusText);		
-			})
-			.done(function (){
-				grecaptcha.reset(0);
-				$(location).attr('href',redirectUrl);
-			})
-			.fail(function(data) {
+			}).done(function (){
+				document.getElementById("booking-form").style.display="none";
+				document.getElementById("success-box").style.display="block";
+			}).fail(function(data) {
 				console.warn("Error! Data: " + data.statusText);
 				// HACK - check if browser is Safari - and redirect even if fail b/c we know the form submits.
 				if (navigator.userAgent.search("Safari") >= 0 && navigator.userAgent.search("Chrome") < 0) {
@@ -47,6 +60,16 @@ $(function () {
 					$(location).attr('href',redirectUrl);   
 				}
 			});
+
+          });
+        },
+
+        onError: function(err) {
+          console.log(err);
         }
-    })
+      }).render('#paypal-button-container');
+    }
+    initPayPalButton();
+
+    
 });
