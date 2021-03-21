@@ -76,7 +76,7 @@ h1 {
           background-clip: text;
 }
 
-@media (max-width: 768px) 
+@media (max-width: 725px) 
 {
     #logo  {
        display:none;
@@ -92,7 +92,3 @@ h1 {
 		margin-left: 15px;
 		
 	}
-	.form-group {
-		margin-right:15px;
-	}
-}
