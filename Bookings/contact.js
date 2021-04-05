@@ -52,8 +52,8 @@ $(function () {
 				SecureToken : "dcb07cb7-1ff5-4a55-ba12-70afa765ab5e",
 				To : "letitgotarot@gmail.com",
 				From : "letitgotarot@gmail.com",
-				Subject : "Personal Reading for ${details.payer.email_address}",
-				Body : "Personal reading ordered for ${details.payer.email_address}"
+				Subject : `Personal Reading for ${details.payer.email_address}`,
+				Body : `Personal reading ordered for ${details.payer.email_address}`
 			});
 			
 			// Use Ajax to submit form data
