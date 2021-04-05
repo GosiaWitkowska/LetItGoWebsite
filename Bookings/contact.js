@@ -19,7 +19,7 @@ $(function () {
         createOrder: function(data, actions) {
 		  var readingType = document.getElementById("readingType").value;
 		  var price = 60;
-		  if (readingType === "1") price = 30;
+		  if (readingType === "1") price = 0.5;
 			  
 			  
           return actions.order.create({
