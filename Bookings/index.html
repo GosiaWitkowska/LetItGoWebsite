@@ -24,9 +24,7 @@
 	 <script src="https://www.paypal.com/sdk/js?client-id=AcNvlQlQ58A_8dZ-OIUNhg4WnTiNdW3gHDwKYjBPItA5KFvsnztF4JK1EEIz9_aHWQzygVQJcq0aNNX0&currency=GBP" data-sdk-integration-source="button-factory"></script>	  
   </head>
   <body id="bookings">
-						
-							<button onclick="send()" class="btn" >Send</button>
-						
+												
 	<a href="../index.html">
 		<img id="logo" src="../assets/img/LogoTransparent.png" alt="Let It Go" width="70" height="70" style="float:left; margin-right:10px;">
 	</a>
@@ -127,25 +125,7 @@
 <script src='https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js'></script>
 <script src="validator.js"></script>
 <script src="contact.js"></script>
-<script>
-function send (){
-	var name = $("#form_name").val();
-	Email.send({
-		SecureToken : "dcb07cb7-1ff5-4a55-ba12-70afa765ab5e",
-		To : 'gosias13@gmail.com',
-		From : "letitgotarot@gmail.com",
-		Subject : "Personal Rading from Let It Go Tarot.",
-		Body : `<html><h2>Dear ${name},</h2><strong>Thank you for ordering your personal reading.</br> Please allow between 4 and 14 days for the reading to be send to you.</strong></br></br><em>Best Wishes,</em></br><em>Let It Go Tarot.</em></br></br><strong style"color: green">www.letitgotarot.com</strong></br><img src="LogoLetItGoSmall.jpg"></img></html>`,
-		Attachments : [
-			{
-				name : "LogoLetItGoSmall.jpg",
-				path : "https://www.letitgotarot.com/assets/img/LogoLetItGoSmall.jpg"
-			}]
-	}).then(
-	  message => alert(message)
-	);
-}
-</script>
+
 </body>
 
 
