@@ -19,7 +19,7 @@ $(function () {
         createOrder: function(data, actions) {
 		  var readingType = document.getElementById("readingType").value;
 		  var price = 60;
-		  if (readingType === "1") price = 30;
+		  if (readingType === "1") price = 1;
 			  
 			  
           return actions.order.create({
@@ -38,7 +38,7 @@ $(function () {
 			
 			Email.send({
 				SecureToken : "dcb07cb7-1ff5-4a55-ba12-70afa765ab5e",
-				To : 'gosias13@gmail.com',
+				To : details.payer.email_address,
 				From : "letitgotarot@gmail.com",
 				Subject : "Personal Rading from Let It Go Tarot.",
 				Body : `<html><h2>Dear ${name},</h2><strong>Thank you for ordering your personal reading.</br> Please allow between 4 and 14 days for the reading to be send to you.</strong><p><em> Best Wishes,</em></p><p><em> Let It Go Tarot.</em></p><p><strong> www.letitgotarot.com</strong></p></html>`,
