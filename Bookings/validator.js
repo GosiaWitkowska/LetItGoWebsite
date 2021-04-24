@@ -4,8 +4,7 @@
   var form = $( "#booking-form" );
 
   var isFormValid = function (){
-	  return ($("#form_name").val().length > 0 &&
-			  $("#form_zodiac").val().length > 0 &&
+	  return ($("#form_email").val().length > 0 &&
 			  $("#form_message").val().length > 0);
 	  
   }
