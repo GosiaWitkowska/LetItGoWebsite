@@ -9,10 +9,10 @@
 	  
   }
 
-  $("#form_name").keyup(function() {
+  $("#form_email").keyup(function() {
 
-	var validator = $( "#booking-form" ).validate();
-	validator.element( "#form_name" );
+	var validator = $( "#booking-form" ).validate();	
+	validator.element( "#form_email" );
 	  if (isFormValid()) {
 		$('#smart-button-container').show();
 		$('#paypal-conintener').hide();
@@ -21,17 +21,7 @@
 		$('#paypal-conintener').show();
 	  }
    });
-  $("#form_zodiac").keyup(function() {
-	  var validator = $( "#booking-form" ).validate();
-	  validator.element( "#form_zodiac" );
-	  if (isFormValid()) {
-		$('#smart-button-container').show();
-		$('#paypal-conintener').hide();
-	  } else {validator.element( "#form_zodiac" )
-		$('#smart-button-container').hide();
-		$('#paypal-conintener').show();
-	  }
-   });
+
   $("#form_message").keyup(function() {
 	  var validator = $( "#booking-form" ).validate();
 	  validator.element( "#form_message" );
