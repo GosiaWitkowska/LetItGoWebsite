@@ -10143,7 +10143,6 @@ body {
 }
 
 #mainNav {
-  display: none;	
   min-height: 3.5rem;
   background-color: #fff;
 }
@@ -10309,6 +10308,7 @@ body {
     font-size: 4rem;
     line-height: 4rem;
   }
+ 
 }
 @media (min-width: 992px) {
   .masthead {
@@ -10324,6 +10324,7 @@ body {
     max-width: 30rem;
     font-size: 1.25rem;
   }
+
 }
 
 .about-section {
@@ -10425,7 +10426,7 @@ body {
 h2 {margin-bottom: 2.5rem;}
 @media (max-width: 768px) 
 {
-    #logo, #additional_introduaction  {
+    #logo, #additional_introduaction, #mainNav  {
        display:none;
     }
 	#title {
