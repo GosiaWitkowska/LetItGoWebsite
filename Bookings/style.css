@@ -9,14 +9,20 @@
 	padding-bottom: 50px;
 	text-align: center;
 }
-
+#bookings .form-group {
+  margin-bottom: 0;	
+}
+#bookings .row {
+  margin-right: 0;
+}
 .error {
 	color: red;
 }
 .content{
-  background: rgb(228 225 214 / 50%);
+  background: rgb(228 225 214 / 30%);
   margin: 0 auto;
-  width:60%
+  width:60%;
+  color: antiquewhite;
 }
 .content header{
   padding-top: 5px;
@@ -82,7 +88,7 @@ h1 {
        display:none;
     }
 	#title {
-	  font-size: 1rem;
+	  font-size: 1.2rem;
 	  margin-left: 15px;
 	  margin-right: 15px;
 	  font-weight: bold;
