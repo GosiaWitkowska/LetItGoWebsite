@@ -81,9 +81,20 @@ h1 {
   -webkit-background-clip: text;
           background-clip: text;
 }
+label.control-label {
+margin-bottom: 0;
+}
 
+#bookings {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  
+}
 @media (max-width: 725px) 
 {
+    #bookings {
+	padding-top: 0;
+    }
     #logo  {
        display:none;
     }

@@ -9,9 +9,7 @@ body {
   background-color: black; 
   
   align-items: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  
+ 
 }
 .form-signin label {
 color: white;	
