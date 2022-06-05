@@ -1,0 +1,287 @@
+@charset "UTF-8";
+
+.ship {
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  height: 100vh;
+  max-height: 560px;
+  width: auto;
+  z-index: 4;
+  -webkit-animation-duration: 180s;
+          animation-duration: 180s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-name: zep;
+          animation-name: zep;
+}
+
+.bar {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 20px;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+
+.container {
+  position: relative;
+  z-index: 4;
+}
+
+.content {
+  position: relative;
+  overflow: hidden;
+  max-height: 700px;
+  height: 100vh;
+  width: 100%;
+}
+@media (max-width: 450px) {
+ .content { display: none; }
+}
+@media (min-width: 450px) {
+ .content-for-mobile { display: none; }
+}
+@media (max-width: 576px) {
+  .content {
+    max-height: 610px;
+  }
+}
+.content:before, .content:after {
+  -webkit-animation-duration: 180s;
+          animation-duration: 180s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100vw;
+  min-height: 62.5vw;
+  top: 50%;
+  left: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 80%;
+  pointer-events: none;
+}
+.content:before {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/68939/clouds4.jpg");
+  -webkit-animation-name: cloud1;
+          animation-name: cloud1;
+  z-index: 1;
+}
+.content:after {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/68939/clouds3.png");
+  -webkit-animation-name: cloud2;
+          animation-name: cloud2;
+  z-index: 3;
+}
+
+@-webkit-keyframes cloud1 {
+  0% {
+    transform: translate(-50%, -50%) scale(1.3) rotate(-10deg);
+  }
+  20% {
+    transform: translate(-50%, -50%) scale(1.4) rotate(5deg);
+  }
+  40% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  60% {
+    transform: translate(-50%, -50%) scale(1.4) rotate(-5deg);
+  }
+  80% {
+    transform: translate(-50%, -50%) scale(1.3) rotate(15deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.3) rotate(-10deg);
+  }
+}
+
+@keyframes cloud1 {
+  0% {
+    transform: translate(-50%, -50%) scale(1.3) rotate(-10deg);
+  }
+  20% {
+    transform: translate(-50%, -50%) scale(1.4) rotate(5deg);
+  }
+  40% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  60% {
+    transform: translate(-50%, -50%) scale(1.4) rotate(-5deg);
+  }
+  80% {
+    transform: translate(-50%, -50%) scale(1.3) rotate(15deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.3) rotate(-10deg);
+  }
+}
+@-webkit-keyframes cloud2 {
+  0% {
+    transform: translate(-50%, -30%) scale(1.35) rotate(-8deg);
+  }
+  20% {
+    transform: translate(-48%, -33%) scale(1.45) rotate(3deg);
+  }
+  40% {
+    transform: translate(-50%, -38%) scale(1.05);
+  }
+  60% {
+    transform: translate(-40%, -40%) scale(1.45) rotate(-3deg);
+  }
+  80% {
+    transform: translate(-52%, -30%) scale(1.35) rotate(13deg);
+  }
+  100% {
+    transform: translate(-50%, -30%) scale(1.35) rotate(-8deg);
+  }
+}
+@keyframes cloud2 {
+  0% {
+    transform: translate(-50%, -30%) scale(1.35) rotate(-8deg);
+  }
+  20% {
+    transform: translate(-48%, -33%) scale(1.45) rotate(3deg);
+  }
+  40% {
+    transform: translate(-50%, -38%) scale(1.05);
+  }
+  60% {
+    transform: translate(-40%, -40%) scale(1.45) rotate(-3deg);
+  }
+  80% {
+    transform: translate(-52%, -30%) scale(1.35) rotate(13deg);
+  }
+  100% {
+    transform: translate(-50%, -30%) scale(1.35) rotate(-8deg);
+  }
+}
+@-webkit-keyframes zep {
+  0% {
+    transform: translate(-10%, -51%);
+  }
+  50% {
+    transform: translate(50%, -75%);
+  }
+  75% {
+    transform: translate(-30%, -51%);
+  }
+  100% {
+    transform: translate(-10%, -51%);
+  }
+}
+@keyframes zep {
+  0% {
+    transform: translate(-10%, -51%);
+  }
+  50% {
+    transform: translate(50%, -75%);
+  }
+  75% {
+    transform: translate(-30%, -51%);
+  }
+  100% {
+    transform: translate(-10%, -51%);
+  }
+}
+[class*=bird] {
+  position: absolute;
+  background: url("../assets/img/birds.png") no-repeat;
+  width: 25px;
+  height: 21px;
+  display: block;
+  -webkit-animation: bird-move 120s infinite, bird-flap 0.8s steps(10) infinite;
+          animation: bird-move 120s infinite, bird-flap 0.8s steps(10) infinite;
+  z-index: 2;
+  opacity: 0.9;
+  left: -2vw;
+}
+
+.bird-1 {
+  top: 38%;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.bird-2 {
+  top: 51%;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.bird-3 {
+  top: 40%;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  transform: scale(0.8);
+}
+
+.bird-4 {
+  top: 43%;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  transform: scale(0.7);
+}
+
+.bird-5 {
+  top: 48%;
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+  transform: scale(0.9);
+}
+
+.bird-6 {
+  top: 50%;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+}
+
+@-webkit-keyframes bird-flap {
+  100% {
+    background-position: 0 -200px;
+  }
+}
+
+@keyframes bird-flap {
+  100% {
+    background-position: 0 -200px;
+  }
+}
+@-webkit-keyframes bird-move {
+  0% {
+    left: -2vw;
+  }
+  100% {
+    left: 102vw;
+    transform: scale(0.3);
+  }
+}
+@keyframes bird-move {
+  0% {
+    left: -2vw;
+  }
+  100% {
+    left: 102vw;
+    transform: scale(0.3);
+  }
+}
+a {
+  font: 13px sans-serif;
+  color: #444;
+  padding: 20px;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+a:hover {
+  color: silver;
+}
+
+#rerun-button {
+  display: none;
+}
